@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Celtech</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="normal">
+
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-brand">
+          <a href="index.html">
+            <img src="img/Logo1.jpeg" alt="Logo" />
+          </a>
+        </div>
+        <ul class="navbar-nav-left">
+          <li><a href="index.html" accesskey="h">Home</a></li>
+          <li><a href="https://www.cortex-intelligence.com/" accesskey="a">Cortex</a></li>
+          <li><a href="https://deepmind.google/" accesskey="t">DeepMind</a></li>
+          <li><a href="https://www.apple.com/br/siri/" accesskey="y">Siri</a></li>
+          <li><a href="https://alexa.amazon.com.br/" accesskey="ç">Alexa</a></li> 
+      </ul>      
+      </div>
+    </nav>
+
+    <center>
+      <div class="carrossel">
+        <div class="container">
+          <img src="img/Slide/1.png" alt="Slide 1" />
+          <img src="img/Slide/2.png" alt="Slide 2" />
+          <img src="img/Slide/3.png" alt="Slide 3" />
+          <img src="img/Slide/4.png" alt="Slide 4" />
+          <img src="img/Slide/5.png" alt="Slide 5" />
+        </div>
+      </div>
+      <br>
+      <div vw class="enabled">
+        <a href="#" accesskey="v" onclick="document.querySelector('[vw-access-button]').click(); return false;">
+          <div vw-access-button class="active"></div>
+        </a>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+    </center>
+    <br>
+    <br>
+    <div class="container-page">
+      <div class="product-card">
+        <img src="img/Cortex.png" alt="Cortex Product Image" />
+        <h2>Cortex</h2>
+        <div class="buy-btn-wrapper">
+          <a href="https://www.cortex-intelligence.com/" class="buy-btn" accesskey="i">Abrir</a>
+        </div>
+      </div>    
+      <div class="product-card">
+        <img src="Deppmind.png" alt="Cortex Product Image" />
+        <h2>Google DeepMind</h2>
+        <div class="buy-btn-wrapper">
+          <a href="https://deepmind.google/" class="buy-btn" accesskey="s">Abrir</a>
+        </div>
+      </div>  
+      <div class="product-card">
+        <img src="siri.png" alt="Cortex Product Image" />
+        <h2>Siri</h2>
+        <div class="buy-btn-wrapper">
+          <a href="https://www.apple.com/br/siri/" class="buy-btn" accesskey="m">Abrir</a>
+        </div>
+      </div>  
+      <div class="product-card">
+        <img src="img/alexa.jpg" alt="Cortex Product Image" />
+        <h2>Alexa</h2>
+        <div class="buy-btn-wrapper">
+          <a href="https://alexa.amazon.com.br/" class="buy-btn" accesskey="g">Abrir</a>
+        </div>
+      </div>  
+    </div>
+
+    <br>
+    <center>
+      <h2>Atalhos</h2>
+        <h3>Pressione Alt + I para abrir a primeira IA.</h3>
+        <h3>Pressione Alt + S para abrir a segunda IA.</h3>
+        <h3>Pressione Alt + M para abrir a terceira IA.</h3>
+        <h3>Pressione Alt + G para abrir a quarta IA.</h3>
+        <h2>Gerenciando da Página</h2>
+        <h3>Abrir o Vlibras : Pressione Alt + V</h3>
+        <h3>Home:  Pressione Alt + H</code></h3>
+        <h3>Cortex: Pressione Alt + A</code></h3>
+        <h3>Google DeepMind: Pressione Alt + T</code></h3>
+        <h3>Siri: Pressione Alt + Y</code></h3>
+        <h3>Alexa: Pressione Alt + Ç</code></h3>
+
+
+    </center>
+    <br>
+    <div>
+      <div class="divider"></div>
+      <footer class="footer">
+        <div class="footer-container">
+          <p>© 2024 Celtech. Todos os direitos reservados.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Slider functionality
+      const box = document.querySelector(".container");
+      const imagens = document.querySelectorAll(".container img");
+
+      let contador = 0;
+
+      function slider() {
+        contador++;
+
+        if (contador > imagens.length - 1) {
+          contador = 0;
+        }
+
+        box.style.transform = `translateX(${-contador * 100}%)`;
+      }
+
+      setInterval(slider, 2000);
+    </script>
+  </body>
+</html>

@@ -1,1 +1,1 @@
-# CeltechIA
+# Celtech
